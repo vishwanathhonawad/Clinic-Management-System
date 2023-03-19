@@ -1,0 +1,5 @@
+com.demo.spring
+com.demo.spring.controller
+com.demo.spring.exception
+com.demo.spring.repository
+com.demo.spring.service

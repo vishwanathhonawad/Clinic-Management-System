@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+	crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	crossorigin="anonymous"></script>
+
+<!--fontawesome-->
+
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+	integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+	crossorigin="anonymous"></script>
+
+<title>HEALING HAND HOSPITAL</title>
+<style>
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+body {
+  background-image: url('images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-light bg-dark">
+		<a class="navbar-brand" href="#"><image src="images/logo.png"
+				alt="image" width="50" height="50"
+				style="margin-left:10px;margin-right:10px;"></image>
+				<b class="text-white fs-3" style="font-size: 30;">HEALING HAND HOSPITAL</b></a>
+		<button type="button" class="navbar-toggler bg-light"
+			data-toggle="collapse" data-target="#nav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-between "
+			id="nav">
+			<ul class="navbar-nav">
+
+					<li class="nav-item"><a
+					class="nav-link text-light font-weight-bold px-3" href="/">HOME</a></li>
+
+				<li class="nav-item"><a
+					class="nav-link text-light font-weight-bold px-3" href="/intro-contact">CONTACT</a>
+
+				</li>
+
+				<li class="nav-item"><a
+					class="nav-link text-light font-weight-bold px-3" href="/intro-aboutUs">ABOUT US</a>
+
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+      <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="/signUp">Sign Up</a>
+    </form>
+		</div>
+	</nav>
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+       
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        <form action="update" method="POST">
+        <h3 class="form-label" style="margin-left:30%">Rest Password</h3>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+          <label class="form-label" for="form1Example13">User Name</label>
+            <input type="text" id="form1Example13" name="userName" class="form-control form-control-lg" required/>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+          <label class="form-label" for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control form-control-lg" required/>
+          </div>
+          
+          <div class="form-outline mb-4">
+          <label class="form-label" for="passwordTwo">Confirm Password</label>
+            <input type="password" id="passwordTwo" name="passwordTwo" class="form-control form-control-lg" required/>
+            
+          </div>
+           <div class="d-flex justify-content-around align-items-center mb-4">
+            <!-- Checkbox -->
+            
+            <a href="/login"> Login....</a>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+        </form>
+           <div th:text="${response}" style="background-color: rgba(255,0,0,0.2);  text-align:center"></div>
+          <div th:text="${response1}" style="background-color: rgba(255,0,0,0.2);  text-align:center"></div>
+                <div th:text="${response2}" style="background-color: rgba(255,0,0,0.2);  text-align:center"></div>
+                <div th:text="${response3}" style="background-color: rgba(255,0,0,0.2);  text-align:center"></div>
+                <div th:text="${response4}" style="background-color: rgba(255,0,0,0.2);  text-align:center"></div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

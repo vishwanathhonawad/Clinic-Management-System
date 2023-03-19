@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+	crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous">
+
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+	integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+	crossorigin="anonymous"></script>
+
+<!--fontawesome-->
+
+<script defer
+	src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+	integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+	crossorigin="anonymous"></script>
+
+
+
+<title>HEALING HAND HOSPITAL</title>
+<style>
+.divider:after, .divider:before {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: #eee;
+}
+
+.contact-form {
+	border: thick;
+}
+
+.form-horizontal {
+	width: 50%;
+	margin-left: 15%;
+}
+
+h2 {
+	width: 50%;
+	margin-left: 15%;
+	margin-top: 15%;
+}
+.nav-pills li {
+  width:100%
+}
+
+</style>
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-md navbar-light bg-dark">
+		<a class="navbar-brand" href="#"><image src="images/logo.png"
+				alt="image" width="50" height="50"
+				style="margin-left:10px;margin-right:10px;"></image><b class="text-white fs-3"
+			style="font-size: 30;">HEALING HAND HOSPITAL</b></a>
+		<button type="button" class="navbar-toggler bg-light"
+			data-toggle="collapse" data-target="#nav">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse justify-content-between "
+			id="nav">
+			<ul class="navbar-nav">
+
+				<li class="nav-item"><a
+					class="nav-link text-light font-weight-bold px-3" href="appointment-add">Book Appointment</a></li>
+
+				<li class="nav-item"><a
+					class="nav-link text-light font-weight-bold px-3" href="appointment-patient">Find Appointment Of Patient</a>
+
+				</li>
+
+				<li class="nav-item"><a
+					class="nav-link text-light font-weight-bold px-3" href="appointment-doctor">Find Appointment Of Doctor</a>
+
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row flex-nowrap">
+			<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+				<div
+					class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+					<a href="/"
+						class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+						<span class="fs-5 d-none d-sm-inline">Menu</span>
+					</a>
+					<ul
+						class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+						id="menu">
+						<li class="nav-item"><a href="home"
+							class="nav-link align-middle px-0"> <image
+									src="images/home.png" alt="image" width="20" height="20"></image><span
+								class="ms-1 d-none d-sm-inline">&nbsp Home</span>
+						</a></li>
+						<li class="nav-item"><a href="patient"
+							class="nav-link align-middle px-0"> <image
+									src="images/patient.png" alt="image" width="20" height="20"></image>
+								<span class="ms-1 d-none d-sm-inline">Patient</span>
+						</a></li>
+						<li class="nav-item"><a href="doctor"
+							class="nav-link align-middle px-0"> <image
+									src="images/doctor.png" alt="image" width="20" height="20"></image>
+								<span class="ms-1 d-none d-sm-inline">Doctor</span>
+						</a></li>
+						<li class="nav-item"><a href="appointment"
+							class="nav-link align-middle px-0 active"> <image
+									src="images/appointment.png" alt="image" width="20" height="20"></image>
+								<span class="ms-1 d-none d-sm-inline">Appointment</span>
+						</a></li>
+						<li class="nav-item"><a href="speciality"
+							class="nav-link align-middle px-0"> <image
+									src="images/speciality.png" alt="image" width="20" height="20"></image>
+								<span class="ms-1 d-none d-sm-inline">Speciality</span>
+						</a></li>
+						<li class="nav-item"><a href="diagnostic"
+							class="nav-link align-middle px-0"> <image
+									src="images/diagnostic.png" alt="image" width="20" height="20"></image>
+								<span class="ms-1 d-none d-sm-inline">Diagnostic</span>
+						</a></li>
+
+					</ul>
+
+
+				</div>
+
+			</div>
+			<div class="img">
+				<image src="images/blank.png" alt="image" width="100" height="100" style="margin-left: 35%;margin-top: 15%;"></image>
+
+			</div>
+</body>
+</html>
